@@ -16,8 +16,8 @@ CPMDeclarePackage(asio
 
 CPMDeclarePackage(websocketpp
   NAME websocketpp
-  VERSION 0.8.2
-  URL https://github.com/zaphoyd/websocketpp/archive/refs/tags/0.8.2.zip
+  VERSION 0.8.3
+  URL https://github.com/yan990703/websocketpp/archive/refs/tags/0.8.3.zip
   OPTIONS
   "ENABLE_CPP11 ON"
   "BUILD_TESTS OFF"
