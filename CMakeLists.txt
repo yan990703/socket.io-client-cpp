@@ -50,7 +50,11 @@ else()
 endif()
 
 CPMGetPackage(asio)
-CPMGetPackage(websocketpp)
+CPMGetPackage(
+        NAME websocketpp
+        GIT_REPOSITORY https://github.com/zaphoyd/websocketpp
+        GIT_TAG        0.8.2
+)
 CPMGetPackage(json)
 CPMGetPackage(CPMPackageProject)
 
