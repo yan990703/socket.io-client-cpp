@@ -40,7 +40,15 @@ file(
 include(${CMAKE_CURRENT_BINARY_DIR}/cmake/CPM.cmake)
 CPMUsePackageLock(package-lock.cmake)
 
-CPMGetPackage(OpenSSL)
+#CPMGetPackage(OpenSSL)
+
+# ==== OpenSSL handling ====
+if (NOT TARGET OpenSSL::SSL)
+  CPMGetPackage(OpenSSL)
+else()
+  message(STATUS "Using external OpenSSL::SSL / OpenSSL::Crypto")
+endif()
+
 CPMGetPackage(asio)
 CPMGetPackage(websocketpp)
 CPMGetPackage(json)
